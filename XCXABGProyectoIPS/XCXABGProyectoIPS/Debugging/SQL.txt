@@ -1,0 +1,39 @@
+﻿
+CREATE DATABASE GestionMat;
+USE GestionMat;
+	CREATE TABLE IF NOT EXISTS Alumno (
+		NumMat INTEGER NOT NULL,
+		Nombre CHAR(16) NULL,
+		Apellido1 CHAR(16) NULL,
+		Apellido2 CHAR(16) NULL,
+		PRIMARY KEY (NumMat)
+	);
+
+	CREATE TABLE IF NOT EXISTS Asignatura (
+		Codigo INTEGER NOT NULL,
+		Nombre CHAR(16) NULL,
+		PRIMARY KEY (Codigo)
+	);
+
+	CREATE TABLE IF NOT EXISTS Profesor (
+		NumEmpleado INTEGER NOT NULL,
+		Apellido1 CHAR(16) NULL,
+		Apellido2 CHAR(16) NULL,
+		Nombre CHAR(16) NULL,
+		Email CHAR(200) NULL,
+		PRIMARY KEY (NumEmpleado)
+	);
+
+	CREATE TABLE IF NOT EXISTS Matricula (
+		Fecha DATETIME NULL,
+		NumMat INTEGER NOT NULL,
+		Codigo INTEGER NOT NULL,
+		FOREIGN KEY (NumMat) REFERENCES Alumno (NumMat),
+		FOREIGN KEY (Codigo) REFERENCES Asignatura (Codigo)
+	);
+
+	ALTER TABLE Asignatura ADD 
+	NumEmpleado INTEGER NOT NULL;
+	ALTER TABLE Asignatura ADD FOREIGN KEY (NumEmpleado) REFERENCES Profesor(NumEmpleado);
+ 
+

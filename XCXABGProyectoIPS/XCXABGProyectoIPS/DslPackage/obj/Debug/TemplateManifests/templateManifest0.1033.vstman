@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\XCXABGProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{7e8e69d8-0ad2-4905-89ea-aaae84b87505}</TemplateID>
+        <Name Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="103" />
+        <Description Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="102" />
+        <Icon Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>XCXABGProyectoIPS.XCXABG_DSLProyIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\XCXABGProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{6ca4b32b-7047-465b-abd6-0aa5ed6d423c}</TemplateID>
+        <Name Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="103" />
+        <Description Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="102" />
+        <Icon Package="{f7d68baa-ba4b-41d7-90f5-cd3f8d879bac}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>XCXABGProyectoIPS.XCXABG_DSLProyIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

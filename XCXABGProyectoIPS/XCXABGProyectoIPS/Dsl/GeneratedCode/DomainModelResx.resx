@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPSDomainModel.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPS</value>
+    <comment>Description for DslLibrary &apos;XCXABGProyectoIPS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPSDomainModel.DisplayName" xml:space="preserve">
+    <value>XCXABGProyectoIPS</value>
+    <comment>DisplayName for DslLibrary &apos;XCXABGProyectoIPS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Tapiz.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Tapiz.DisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>DisplayName for DomainClass &apos;Tapiz&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Entidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Entidad</value>
+    <comment>Description for DomainClass &apos;Entidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainClass &apos;Entidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Entidad/Name.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Entidad.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Entidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Entidad/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Entidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Relacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Relacion</value>
+    <comment>Description for DomainClass &apos;Relacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainClass &apos;Relacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Relacion/Name.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Relacion.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Relacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Relacion/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Relacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo</value>
+    <comment>Description for DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/Nombre.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Nombre</value>
+    <comment>Description for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/Nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;Nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/LongitudDato.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Longitud Dato</value>
+    <comment>Description for DomainProperty &apos;LongitudDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/LongitudDato.DisplayName" xml:space="preserve">
+    <value>Longitud Dato</value>
+    <comment>DisplayName for DomainProperty &apos;LongitudDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/NameTipo.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Name Tipo</value>
+    <comment>Description for DomainProperty &apos;NameTipo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/NameTipo.DisplayName" xml:space="preserve">
+    <value>Name Tipo</value>
+    <comment>DisplayName for DomainProperty &apos;NameTipo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/TipoDato.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Tipo Dato</value>
+    <comment>Description for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/TipoDato.DisplayName" xml:space="preserve">
+    <value>Tipo Dato</value>
+    <comment>DisplayName for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/letraSize.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Letra Size</value>
+    <comment>Description for DomainProperty &apos;letraSize&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/letraSize.DisplayName" xml:space="preserve">
+    <value>Letra Size</value>
+    <comment>DisplayName for DomainProperty &apos;letraSize&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/colorLetra.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.Atributo.Color Letra</value>
+    <comment>Description for DomainProperty &apos;colorLetra&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.Atributo/colorLetra.DisplayName" xml:space="preserve">
+    <value>Color Letra</value>
+    <comment>DisplayName for DomainProperty &apos;colorLetra&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimaria.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.ClavePrimaria</value>
+    <comment>Description for DomainClass &apos;ClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimaria.DisplayName" xml:space="preserve">
+    <value>Clave Primaria</value>
+    <comment>DisplayName for DomainClass &apos;ClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimaria/esNulo.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.ClavePrimaria.Es Nulo</value>
+    <comment>Description for DomainProperty &apos;esNulo&apos; on DomainClass &apos;ClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimaria/esNulo.DisplayName" xml:space="preserve">
+    <value>Es Nulo</value>
+    <comment>DisplayName for DomainProperty &apos;esNulo&apos; on DomainClass &apos;ClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoEntidad</value>
+    <comment>Description for DomainClass &apos;AtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidad.DisplayName" xml:space="preserve">
+    <value>Atributo Entidad</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidad/esNulo.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoEntidad.Nullable</value>
+    <comment>Description for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidad/esNulo.DisplayName" xml:space="preserve">
+    <value>Nullable</value>
+    <comment>DisplayName for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoRelacion</value>
+    <comment>Description for DomainClass &apos;AtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacion/esNulo.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoRelacion.Nullable</value>
+    <comment>Description for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacion/esNulo.DisplayName" xml:space="preserve">
+    <value>Nullable</value>
+    <comment>DisplayName for DomainProperty &apos;esNulo&apos; on DomainClass &apos;AtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad</value>
+    <comment>Description for DomainClass &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad.DisplayName" xml:space="preserve">
+    <value>Tapiz Has Entidad</value>
+    <comment>DisplayName for DomainClass &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Tapiz.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad.Tapiz</value>
+    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Tapiz.DisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Tapiz.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Entidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasEntidad/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;TapizHasEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned</value>
+    <comment>Description for DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.DisplayName" xml:space="preserve">
+    <value>Entidad References Relacioned</value>
+    <comment>DisplayName for DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/aCardMin.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.ACard Min</value>
+    <comment>Description for DomainProperty &apos;aCardMin&apos; on DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/aCardMin.DisplayName" xml:space="preserve">
+    <value>ACard Min</value>
+    <comment>DisplayName for DomainProperty &apos;aCardMin&apos; on DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/bCardMax.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.BCard Max</value>
+    <comment>Description for DomainProperty &apos;bCardMax&apos; on DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/bCardMax.DisplayName" xml:space="preserve">
+    <value>BCard Max</value>
+    <comment>DisplayName for DomainProperty &apos;bCardMax&apos; on DomainClass &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Entidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Relacioned</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Relacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadReferencesRelacioned/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;EntidadReferencesRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned</value>
+    <comment>Description for DomainClass &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned.DisplayName" xml:space="preserve">
+    <value>Tapiz Has Relacioned</value>
+    <comment>DisplayName for DomainClass &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Tapiz.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned.Tapiz</value>
+    <comment>Description for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Tapiz.DisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>DisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Tapiz.PropertyDisplayName" xml:space="preserve">
+    <value>Relacioned</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Tapiz&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Relacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.TapizHasRelacioned/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;TapizHasRelacioned&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria</value>
+    <comment>Description for DomainClass &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria.DisplayName" xml:space="preserve">
+    <value>Entidad Has Clave Primaria</value>
+    <comment>DisplayName for DomainClass &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/Entidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Clave Primaria</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/ClavePrimaria.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria.ClavePrimaria</value>
+    <comment>Description for DomainRole &apos;ClavePrimaria&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/ClavePrimaria.DisplayName" xml:space="preserve">
+    <value>Clave Primaria</value>
+    <comment>DisplayName for DomainRole &apos;ClavePrimaria&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasClavePrimaria/ClavePrimaria.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClavePrimaria&apos; on DomainRelationship &apos;EntidadHasClavePrimaria&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion</value>
+    <comment>Description for DomainClass &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Relacion Has Atributo Relacion</value>
+    <comment>DisplayName for DomainClass &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/Relacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/AtributoRelacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion.AtributoRelacion</value>
+    <comment>Description for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/AtributoRelacion.DisplayName" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>DisplayName for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionHasAtributoRelacion/AtributoRelacion.PropertyDisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoRelacion&apos; on DomainRelationship &apos;RelacionHasAtributoRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad</value>
+    <comment>Description for DomainClass &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad.DisplayName" xml:space="preserve">
+    <value>Entidad Has Atributo Entidad</value>
+    <comment>DisplayName for DomainClass &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/Entidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/AtributoEntidad.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad.AtributoEntidad</value>
+    <comment>Description for DomainRole &apos;AtributoEntidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/AtributoEntidad.DisplayName" xml:space="preserve">
+    <value>Atributo Entidad</value>
+    <comment>DisplayName for DomainRole &apos;AtributoEntidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadHasAtributoEntidad/AtributoEntidad.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoEntidad&apos; on DomainRelationship &apos;EntidadHasAtributoEntidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/entero.DisplayName" xml:space="preserve">
+    <value>entero</value>
+    <comment>Display name for EnumerationLiteral &apos;entero&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/entero.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.datos.entero</value>
+    <comment>Description for EnumerationLiteral &apos;entero&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/real.DisplayName" xml:space="preserve">
+    <value>real</value>
+    <comment>Display name for EnumerationLiteral &apos;real&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/real.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.datos.real</value>
+    <comment>Description for EnumerationLiteral &apos;real&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/fecha.DisplayName" xml:space="preserve">
+    <value>fecha</value>
+    <comment>Display name for EnumerationLiteral &apos;fecha&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/fecha.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.datos.fecha</value>
+    <comment>Description for EnumerationLiteral &apos;fecha&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/alfanumerico.DisplayName" xml:space="preserve">
+    <value>alfanumerico</value>
+    <comment>Display name for EnumerationLiteral &apos;alfanumerico&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.datos/alfanumerico.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.datos.alfanumerico</value>
+    <comment>Description for EnumerationLiteral &apos;alfanumerico&apos; on DomainEnumeration &apos;datos&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/cero.DisplayName" xml:space="preserve">
+    <value>cero</value>
+    <comment>Display name for EnumerationLiteral &apos;cero&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/cero.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.cardinalidad.cero</value>
+    <comment>Description for EnumerationLiteral &apos;cero&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/uno.DisplayName" xml:space="preserve">
+    <value>uno</value>
+    <comment>Display name for EnumerationLiteral &apos;uno&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/uno.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.cardinalidad.uno</value>
+    <comment>Description for EnumerationLiteral &apos;uno&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/dos.DisplayName" xml:space="preserve">
+    <value>dos</value>
+    <comment>Display name for EnumerationLiteral &apos;dos&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/dos.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.cardinalidad.dos</value>
+    <comment>Description for EnumerationLiteral &apos;dos&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/N.DisplayName" xml:space="preserve">
+    <value>N</value>
+    <comment>Display name for EnumerationLiteral &apos;N&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.cardinalidad/N.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.cardinalidad.N</value>
+    <comment>Description for EnumerationLiteral &apos;N&apos; on DomainEnumeration &apos;cardinalidad&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadGS.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadGS</value>
+    <comment>Description for DomainClass &apos;EntidadGS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadGS.DisplayName" xml:space="preserve">
+    <value>Entidad GS</value>
+    <comment>DisplayName for DomainClass &apos;EntidadGS&apos;</comment>
+  </data>
+  <data name="EntidadGSNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionGS.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.RelacionGS</value>
+    <comment>Description for DomainClass &apos;RelacionGS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.RelacionGS.DisplayName" xml:space="preserve">
+    <value>Relacion GS</value>
+    <comment>DisplayName for DomainClass &apos;RelacionGS&apos;</comment>
+  </data>
+  <data name="RelacionGSNameDefaultText" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacionGS.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoRelacionGS</value>
+    <comment>Description for DomainClass &apos;AtributoRelacionGS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoRelacionGS.DisplayName" xml:space="preserve">
+    <value>Atributo Relacion GS</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelacionGS&apos;</comment>
+  </data>
+  <data name="AtributoRelacionGSNombreTipoDatoDefaultText" xml:space="preserve">
+    <value>NombreTipoDato</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidadGS.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.AtributoEntidadGS</value>
+    <comment>Description for DomainClass &apos;AtributoEntidadGS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.AtributoEntidadGS.DisplayName" xml:space="preserve">
+    <value>Atributo Entidad GS</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEntidadGS&apos;</comment>
+  </data>
+  <data name="AtributoEntidadGSNombreTipoDatoDefaultText" xml:space="preserve">
+    <value>NombreTipoDato</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimariaGS.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.ClavePrimariaGS</value>
+    <comment>Description for DomainClass &apos;ClavePrimariaGS&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.ClavePrimariaGS.DisplayName" xml:space="preserve">
+    <value>Clave Primaria GS</value>
+    <comment>DisplayName for DomainClass &apos;ClavePrimariaGS&apos;</comment>
+  </data>
+  <data name="ClavePrimariaGSNombreTipoDatoDefaultText" xml:space="preserve">
+    <value>NombreTipoDato</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadRelacion.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.EntidadRelacion</value>
+    <comment>Description for DomainClass &apos;EntidadRelacion&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.EntidadRelacion.DisplayName" xml:space="preserve">
+    <value>Entidad Relacion</value>
+    <comment>DisplayName for DomainClass &apos;EntidadRelacion&apos;</comment>
+  </data>
+  <data name="EntidadRelacionCardMinDefaultText" xml:space="preserve">
+    <value>CardMin</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="EntidadRelacionCardMaxDefaultText" xml:space="preserve">
+    <value>CardMax</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>XCXABGProyectoIPS (*.XCXABG_DSLProyIPS)|*.XCXABG_DSLProyIPS</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>XCXABGProyectoIPS Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPSDiagram.Description" xml:space="preserve">
+    <value>Description for IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPSDiagram</value>
+    <comment>Description for DomainClass &apos;XCXABGProyectoIPSDiagram&apos;</comment>
+  </data>
+  <data name="IPS_GT16.XCXABGProyectoIPS.XCXABGProyectoIPSDiagram.DisplayName" xml:space="preserve">
+    <value>Minimal Language Diagram</value>
+    <comment>DisplayName for DomainClass &apos;XCXABGProyectoIPSDiagram&apos;</comment>
+  </data>
+  <data name="XCXABGProyectoIPSToolboxTab" xml:space="preserve">
+    <value>XCXABGProyectoIPS</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="EntidadToolboxItem" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadToolboxTooltip" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionToolboxItem" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionToolboxTooltip" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EntidadRelacionToolboxItem" xml:space="preserve">
+    <value>EntidadRelacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadRelacionToolboxTooltip" xml:space="preserve">
+    <value>Entidad Relacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoRelacionToolboxItem" xml:space="preserve">
+    <value>AtributoRelacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoRelacionToolboxTooltip" xml:space="preserve">
+    <value>Atributo Relacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoEntidadToolboxItem" xml:space="preserve">
+    <value>AtributoEntidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoEntidadToolboxTooltip" xml:space="preserve">
+    <value>Atributo Entidad</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ClavePrimariaToolboxItem" xml:space="preserve">
+    <value>ClavePrimaria</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClavePrimariaToolboxTooltip" xml:space="preserve">
+    <value>Clave Primaria</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ventana.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\relacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EntidadRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\entidadrelacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoRelacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ClavePrimariaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\clavePrimaria.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapiz xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c4349241-d562-4406-b4ea-e9677a5e5cfa" xmlns="http://schemas.microsoft.com/dsltools/XCXABGProyectoIPS">
+  <entidad>
+    <tapizHasEntidad Id="738270a8-ac4d-45b5-8a78-d4863d0fdb5c">
+      <entidad Id="e224bd6e-a209-4804-a43b-80701ea1e322" name="Alumno">
+        <relacioned>
+          <entidadReferencesRelacioned Id="5fb7d79f-c62d-4017-a171-0354f17ad21d" aCardMin="cero" bCardMax="N">
+            <relacionMoniker Id="cff39a41-8f33-477b-92b2-62eb0b769175" />
+          </entidadReferencesRelacioned>
+        </relacioned>
+        <clavePrimaria>
+          <entidadHasClavePrimaria Id="0988e5f4-d6af-47b9-ad74-549daab1e553">
+            <clavePrimaria Id="c0847f29-a6a3-46ce-993c-94d32c63ee83" nombre="NumMat" longitudDato="16" tipoDato="entero" />
+          </entidadHasClavePrimaria>
+        </clavePrimaria>
+        <atributoEntidad>
+          <entidadHasAtributoEntidad Id="724f2b44-2f82-4d2e-92a0-25d5a746c741">
+            <atributoEntidad Id="49cb6b96-603a-4bd6-9e12-2f32064b0ec4" nombre="Nombre" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+          <entidadHasAtributoEntidad Id="9aa7d738-f636-4265-8b5c-be6be489e807">
+            <atributoEntidad Id="cf876d6d-a6a6-46e5-a2c1-1945db1ac426" nombre="Apellido1" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+          <entidadHasAtributoEntidad Id="085fed6c-e86d-44f5-8a00-57a315d43eb7">
+            <atributoEntidad Id="c60d78fe-2810-44ed-9c1e-7be1d5405cf5" nombre="Apellido2" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+        </atributoEntidad>
+      </entidad>
+    </tapizHasEntidad>
+    <tapizHasEntidad Id="0d1835e8-80d2-4139-a612-ad6377de46ec">
+      <entidad Id="71ca4c93-1129-4f42-aa18-cfcd42a2e19b" name="Asignatura">
+        <relacioned>
+          <entidadReferencesRelacioned Id="64263c60-52a8-4c49-9468-86d63f557ea1" aCardMin="uno" bCardMax="N">
+            <relacionMoniker Id="cff39a41-8f33-477b-92b2-62eb0b769175" />
+          </entidadReferencesRelacioned>
+          <entidadReferencesRelacioned Id="c95bce92-18ce-46e6-a912-63b199da31a8" aCardMin="uno" bCardMax="N">
+            <relacionMoniker Id="448b2dfe-ecf9-49d6-ad9e-57c7cfedeee5" />
+          </entidadReferencesRelacioned>
+        </relacioned>
+        <clavePrimaria>
+          <entidadHasClavePrimaria Id="23557a9f-3f7a-4320-b7bc-183e69f425eb">
+            <clavePrimaria Id="5fd5ea67-ef31-483d-8d08-541b45c97fac" nombre="Codigo" longitudDato="16" tipoDato="entero" />
+          </entidadHasClavePrimaria>
+        </clavePrimaria>
+        <atributoEntidad>
+          <entidadHasAtributoEntidad Id="b40e5482-e863-4179-8eb0-39478ead2d01">
+            <atributoEntidad Id="46cab825-6fb7-4420-b93f-1ebd4f10be0b" nombre="Nombre" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+        </atributoEntidad>
+      </entidad>
+    </tapizHasEntidad>
+    <tapizHasEntidad Id="9e984b1b-e7dc-44f1-8f38-2a1034db9786">
+      <entidad Id="f2f7b6c9-ab4e-489b-9401-bb6675fb69d2" name="Profesor">
+        <relacioned>
+          <entidadReferencesRelacioned Id="8386deab-3e72-479e-9228-19db0f5c1b0b" aCardMin="uno" bCardMax="uno">
+            <relacionMoniker Id="448b2dfe-ecf9-49d6-ad9e-57c7cfedeee5" />
+          </entidadReferencesRelacioned>
+        </relacioned>
+        <clavePrimaria>
+          <entidadHasClavePrimaria Id="f9dedee1-a065-433b-a85e-817831fb700f">
+            <clavePrimaria Id="6bb4b25a-1d34-40ad-8fd1-5eb83cb1f35f" nombre="NumEmpleado" longitudDato="0" tipoDato="entero" />
+          </entidadHasClavePrimaria>
+        </clavePrimaria>
+        <atributoEntidad>
+          <entidadHasAtributoEntidad Id="aaf2cdd1-b98c-4f8f-b474-1a43fd4a8244">
+            <atributoEntidad Id="3305b1cc-8bce-46ac-a54c-e93de3227eac" nombre="Apellido1" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+          <entidadHasAtributoEntidad Id="07f9d914-8df6-4270-ab5f-e6057d5f7d85">
+            <atributoEntidad Id="89a2db94-f021-4a35-9ad1-b11e7a89b497" nombre="Apellido2" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+          <entidadHasAtributoEntidad Id="b84b7149-e754-4344-b568-dc0297c340bb">
+            <atributoEntidad Id="b667d03f-973e-4053-89a9-4f228ec513dd" nombre="Nombre" longitudDato="16" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+          <entidadHasAtributoEntidad Id="d9c02e40-c763-42f4-8e42-79e25ee13b1a">
+            <atributoEntidad Id="f1f40210-68ca-4766-9aba-ccaafc310d5c" nombre="Email" longitudDato="200" tipoDato="alfanumerico" />
+          </entidadHasAtributoEntidad>
+        </atributoEntidad>
+      </entidad>
+    </tapizHasEntidad>
+  </entidad>
+  <relacioned>
+    <tapizHasRelacioned Id="c498ab2d-2265-41e0-95fa-5185dfe6e144">
+      <relacion Id="cff39a41-8f33-477b-92b2-62eb0b769175" name="Matricula">
+        <atributoRelacion>
+          <relacionHasAtributoRelacion Id="89b92f49-6675-49d2-8c7b-5dd3d5ba8693">
+            <atributoRelacion Id="f248fdc3-eae8-4630-a7da-ee5a17636c4e" nombre="Fecha" longitudDato="0" tipoDato="fecha" />
+          </relacionHasAtributoRelacion>
+        </atributoRelacion>
+      </relacion>
+    </tapizHasRelacioned>
+    <tapizHasRelacioned Id="9f113299-74d6-48c9-a0e4-7f976b7214e3">
+      <relacion Id="448b2dfe-ecf9-49d6-ad9e-57c7cfedeee5" name="Imparte" />
+    </tapizHasRelacioned>
+  </relacioned>
+</tapiz>

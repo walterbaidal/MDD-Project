@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xCXABGProyectoIPSDiagram dslVersion="1.0.0.0" Id="ba608b8d-34bd-49fb-8578-c163d545fdf9" absoluteBounds="0, 0, 12.375, 8.5" name="Test">
+  <tapizMoniker Id="c4349241-d562-4406-b4ea-e9677a5e5cfa" />
+  <nestedChildShapes>
+    <entidadGS Id="71b3688f-e2a1-4134-9c0b-163e0a626836" absoluteBounds="0.75, 0.875, 3, 2">
+      <entidadMoniker Id="e224bd6e-a209-4804-a43b-80701ea1e322" />
+    </entidadGS>
+    <clavePrimariaGS Id="51a43384-80e9-4caa-b88a-3dfeee68e34f" absoluteBounds="1, 1.375, 1, 0.5">
+      <clavePrimariaMoniker Id="c0847f29-a6a3-46ce-993c-94d32c63ee83" />
+    </clavePrimariaGS>
+    <atributoEntidadGS Id="5ac6fdf1-8a22-4a59-8592-e90383c19cca" absoluteBounds="2.5, 1.375, 1, 0.5">
+      <atributoEntidadMoniker Id="49cb6b96-603a-4bd6-9e12-2f32064b0ec4" />
+    </atributoEntidadGS>
+    <atributoEntidadGS Id="ac859f44-fd18-4f7a-ae21-1f55113c4d84" absoluteBounds="1, 2.125, 1, 0.5">
+      <atributoEntidadMoniker Id="cf876d6d-a6a6-46e5-a2c1-1945db1ac426" />
+    </atributoEntidadGS>
+    <atributoEntidadGS Id="290dfc6c-2465-4eac-af59-190e3658516b" absoluteBounds="2.5, 2.125, 1, 0.5">
+      <atributoEntidadMoniker Id="c60d78fe-2810-44ed-9c1e-7be1d5405cf5" />
+    </atributoEntidadGS>
+    <relacionGS Id="cea03dd7-3713-45d8-85e2-e0b4518f81dc" absoluteBounds="5, 0.875, 3, 2">
+      <relacionMoniker Id="cff39a41-8f33-477b-92b2-62eb0b769175" />
+    </relacionGS>
+    <entidadRelacion Id="c828c38e-c4ac-4cd9-ad53-4ea71d334f89" edgePoints="[(3.75 : 1.875); (5 : 1.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <entidadReferencesRelacionedMoniker Id="5fb7d79f-c62d-4017-a171-0354f17ad21d" />
+      <relativeChildShapes />
+      <nodes>
+        <entidadGSMoniker Id="71b3688f-e2a1-4134-9c0b-163e0a626836" />
+        <relacionGSMoniker Id="cea03dd7-3713-45d8-85e2-e0b4518f81dc" />
+      </nodes>
+    </entidadRelacion>
+    <entidadGS Id="23c3438a-3cfa-4e15-bba1-3016ca7534db" absoluteBounds="9, 0.875, 3, 2">
+      <entidadMoniker Id="71ca4c93-1129-4f42-aa18-cfcd42a2e19b" />
+    </entidadGS>
+    <entidadRelacion Id="b75091ae-ebdd-4a5b-b29d-b889b21f3765" edgePoints="[(9 : 1.875); (8 : 1.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <entidadReferencesRelacionedMoniker Id="64263c60-52a8-4c49-9468-86d63f557ea1" />
+      <relativeChildShapes />
+      <nodes>
+        <entidadGSMoniker Id="23c3438a-3cfa-4e15-bba1-3016ca7534db" />
+        <relacionGSMoniker Id="cea03dd7-3713-45d8-85e2-e0b4518f81dc" />
+      </nodes>
+    </entidadRelacion>
+    <relacionGS Id="88710e17-02a9-49b4-bece-47f2068c86e0" absoluteBounds="9.125, 3.875, 3, 2">
+      <relacionMoniker Id="448b2dfe-ecf9-49d6-ad9e-57c7cfedeee5" />
+    </relacionGS>
+    <clavePrimariaGS Id="a161682c-8c98-45e8-a438-a5d2232eb63a" absoluteBounds="9.25, 1.375, 1, 0.5">
+      <clavePrimariaMoniker Id="5fd5ea67-ef31-483d-8d08-541b45c97fac" />
+    </clavePrimariaGS>
+    <atributoEntidadGS Id="fd0d7968-69c8-4403-955a-bad8c67e575e" absoluteBounds="10.75, 1.375, 1, 0.5">
+      <atributoEntidadMoniker Id="46cab825-6fb7-4420-b93f-1ebd4f10be0b" />
+    </atributoEntidadGS>
+    <entidadGS Id="77125389-1efc-4dd2-96ff-787a740f1e47" absoluteBounds="5.125, 3.75, 3, 2">
+      <entidadMoniker Id="f2f7b6c9-ab4e-489b-9401-bb6675fb69d2" />
+    </entidadGS>
+    <clavePrimariaGS Id="040c20ed-a60b-4ef8-917b-8696115205f9" absoluteBounds="5.125, 4.125, 1, 0.5">
+      <clavePrimariaMoniker Id="6bb4b25a-1d34-40ad-8fd1-5eb83cb1f35f" />
+    </clavePrimariaGS>
+    <atributoEntidadGS Id="1e3c82ed-867d-4f2d-9808-d57621ab2cf6" absoluteBounds="5.625, 4.625, 1, 0.5">
+      <atributoEntidadMoniker Id="3305b1cc-8bce-46ac-a54c-e93de3227eac" />
+    </atributoEntidadGS>
+    <atributoEntidadGS Id="cba8ae8a-ac6d-4c40-ba68-cd6e328e70dc" absoluteBounds="7.125, 4.125, 1, 0.5">
+      <atributoEntidadMoniker Id="89a2db94-f021-4a35-9ad1-b11e7a89b497" />
+    </atributoEntidadGS>
+    <atributoEntidadGS Id="fae090aa-57b7-4c9f-8dfd-a798e9ca9b68" absoluteBounds="6.125, 4.125, 1, 0.5">
+      <atributoEntidadMoniker Id="b667d03f-973e-4053-89a9-4f228ec513dd" />
+    </atributoEntidadGS>
+    <atributoEntidadGS Id="0372f88f-d626-42e0-a046-8f79fb9977c2" absoluteBounds="6.625, 4.625, 1, 0.5">
+      <atributoEntidadMoniker Id="f1f40210-68ca-4766-9aba-ccaafc310d5c" />
+    </atributoEntidadGS>
+    <entidadRelacion Id="a2736d68-1286-40ce-af67-6c98382285b4" edgePoints="[(10.5625 : 2.875); (10.5625 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <entidadReferencesRelacionedMoniker Id="c95bce92-18ce-46e6-a912-63b199da31a8" />
+      <relativeChildShapes />
+      <nodes>
+        <entidadGSMoniker Id="23c3438a-3cfa-4e15-bba1-3016ca7534db" />
+        <relacionGSMoniker Id="88710e17-02a9-49b4-bece-47f2068c86e0" />
+      </nodes>
+    </entidadRelacion>
+    <entidadRelacion Id="4f49a90a-d54c-4666-8ad3-0abe12a8b893" edgePoints="[(8.125 : 4.8125); (9.125 : 4.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <entidadReferencesRelacionedMoniker Id="8386deab-3e72-479e-9228-19db0f5c1b0b" />
+      <relativeChildShapes />
+      <nodes>
+        <entidadGSMoniker Id="77125389-1efc-4dd2-96ff-787a740f1e47" />
+        <relacionGSMoniker Id="88710e17-02a9-49b4-bece-47f2068c86e0" />
+      </nodes>
+    </entidadRelacion>
+    <atributoRelacionGS Id="cf142dfc-296b-496c-96a4-a5d19a535f62" absoluteBounds="6, 1.75, 1, 0.5">
+      <atributoRelacionMoniker Id="f248fdc3-eae8-4630-a7da-ee5a17636c4e" />
+    </atributoRelacionGS>
+  </nestedChildShapes>
+</xCXABGProyectoIPSDiagram>

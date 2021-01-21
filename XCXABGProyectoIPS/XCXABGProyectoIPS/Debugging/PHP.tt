@@ -1,0 +1,396 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".php" #>
+<#@ XCXABGProyectoIPS processor="XCXABGProyectoIPSDirectiveProcessor" requires="fileName='Test.XCXABG_DSLProyIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+<#
+ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+
+ var cardinalidad = new List<String>();
+ var entidades_conexas = new List<Entidad>();
+ var card1 = "";
+ var card2 = "";
+ Entidad entidadN = null;
+ Entidad entidadUno = null;
+ ClavePrimaria atributoForaneo = null;
+ var entidades = new List<Entidad>();
+ foreach(Entidad ent in this.Tapiz.Entidad){
+	entidades.Add(ent);
+ }
+
+ 
+ foreach(Relacion relacion in this.Tapiz.Relacioned){
+
+	getCardinalidadDeLaRelacion(cardinalidad, entidades_conexas, relacion);
+	card1 = cardinalidad[cardinalidad.Count-2];
+	card2 = cardinalidad[cardinalidad.Count-1];
+
+	if(card1 == "N" && card2 == "N"){
+		fileManager.StartNewFile(relacion.Name + ".php");
+		
+		generateHeadRelacion(relacion);
+		
+		generateBodyRelacion(relacion);
+
+	} else if(card1 == "N" && card2 == "cero" || card2 == "uno" || card2 == "dos"){		
+		entidadN = entidades_conexas[entidades_conexas.Count-2];
+		entidadUno = entidades_conexas[entidades_conexas.Count-1];
+		atributoForaneo = (ClavePrimaria) entidadUno.ClavePrimaria;
+		if(entidades.Contains(entidadN)){
+			fileManager.StartNewFile(entidadN.Name + ".php");
+			generateHeadEntidad(entidadN);
+			generateBodyEntidad(entidadN, atributoForaneo);
+			entidades.Remove(entidadN);
+		}
+		
+		if(entidades.Contains(entidadUno)){
+			
+			fileManager.StartNewFile(entidadUno.Name + ".php");
+			generateHeadEntidad(entidadUno);
+			generateBodyEntidad(entidadUno, null);
+			entidades.Remove(entidadUno);
+		}
+
+	} else if(card2 == "N" && card2 == "cero" || card2 == "uno" || card2 == "dos"){
+		entidadN = entidades_conexas[entidades_conexas.Count-1];
+		entidadUno = entidades_conexas[entidades_conexas.Count-2];
+		atributoForaneo = (ClavePrimaria) entidadUno.ClavePrimaria;
+		if(entidades.Contains(entidadN)){
+			fileManager.StartNewFile(entidadN.Name + ".php");
+			generateHeadEntidad(entidadN);
+			generateBodyEntidad(entidadN, atributoForaneo);
+			entidades.Remove(entidadN);
+		}
+		
+		if(entidades.Contains(entidadUno)){
+			
+			fileManager.StartNewFile(entidadUno.Name + ".php");
+			generateHeadEntidad(entidadUno);
+			generateBodyEntidad(entidadUno, null);
+			entidades.Remove(entidadUno);
+		}
+	}	
+ }
+
+ if(entidades.Any()){
+		foreach(Entidad e in entidades){
+			fileManager.StartNewFile(e.Name + ".php");
+			generateHeadEntidad(e);
+			generateBodyEntidad(e, null);
+		}
+	}
+
+	generateIndex();
+
+ 
+ fileManager.Process();
+#> 
+<#
+	void generateHeadRelacion(Relacion relacion){
+		WriteLine("<html>");
+		WriteLine("	<head>");
+		WriteLine("		<title>");
+		WriteLine("			" + relacion.Name);
+		WriteLine("		</title>");
+		WriteLine("	</head>");
+		WriteLine("");
+	}
+#>
+<#
+	void generateBodyRelacion(Relacion relacion){
+
+		var claves = new List<ClavePrimaria>();
+		getClavesPrimariasDeLaRelacion(claves, relacion);
+
+		var clave1 = claves[claves.Count-1];
+		var clave2 = claves[claves.Count-2];
+
+		WriteLine("	<body bgcolor='#B8D1F1'>");
+		WriteLine("");
+		WriteLine("		<?php");	
+		WriteLine("			if(!(isset($_GET['var" + clave1.Nombre + "'])) and !(isset($GET['var" +  clave2.Nombre + "']))) {");
+		WriteLine("		?>");
+		WriteLine("");
+		WriteLine("		<form>");
+		WriteLine("			<h1>" + relacion.Name + "</h1>");
+		WriteLine("				" + clave1.Nombre + ": <input name='var" + clave1.Nombre + "' type='text' value='' >");
+		WriteLine("				" + clave2.Nombre + ": <input name='var" + clave2.Nombre + "' type='text' value='' >");
+		foreach(AtributoRelacion atributoR in relacion.AtributoRelacion){		
+			WriteLine("				" + atributoR.Nombre + ": <input name='var" + atributoR.Nombre + "' type='text' value='' >");
+		}
+		WriteLine("");
+		WriteLine("				<input type='submit' value='Alta' />");
+		WriteLine("		</form>");
+		WriteLine("");
+		addGoBackButton();
+		WriteLine("		<?php");
+		WriteLine("");
+		WriteLine("			} else {");
+		WriteLine("");
+		WriteLine("			$conex = mysqli_connect('localhost','root') or die('ERROR...');");
+		WriteLine("");
+		WriteLine("			mysqli_select_db($conex,'GestionMat') or die('ERROR CON LA BASE DE DATOS');");
+		WriteLine("");
+		WriteLine("			$" + clave1.Nombre + " = $_GET['var" + clave1.Nombre + "'];");
+		WriteLine("			$" + clave2.Nombre + " = $_GET['var" + clave2.Nombre + "'];");
+		foreach(AtributoRelacion atributoR in relacion.AtributoRelacion){	
+			WriteLine("			$" + atributoR.Nombre + " = $_GET['var" + atributoR.Nombre + "'];");
+		}
+		WriteLine("");
+
+		var variables = "(";
+		foreach(AtributoRelacion atributoR in relacion.AtributoRelacion){	
+			variables += "'$" + atributoR.Nombre + "',";
+		}
+
+		variables += "'$" + clave2.Nombre + "','$" + clave1.Nombre + "'";
+
+		var end_line  = ")\");";
+
+		var variables_names = "(";
+		foreach(AtributoRelacion atributoR in relacion.AtributoRelacion){	
+			variables_names +=  atributoR.Nombre + ",";
+		}
+		variables_names += clave2.Nombre + "," + clave1.Nombre + "";
+
+		WriteLine("			$resultado = mysqli_query($conex,\"INSERT INTO " + relacion.Name + variables_names + ")" + " VALUES " + variables + end_line);
+		WriteLine("");
+		WriteLine("			if ($resultado){");
+		WriteLine("				echo' <b> Datos Insertados correctamente. Estás siendo redireccionando...</b> '; ");
+		WriteLine("				echo(\"");
+		WriteLine("					<script>");
+		WriteLine("						window.setTimeout(function(){");
+		WriteLine("							window.location.href = '" + relacion.Name + ".php';");
+		WriteLine("						}, 2000);");
+		WriteLine("					</script>");
+		WriteLine("				\");");
+		WriteLine("			} else {");
+		WriteLine("				echo 'Error en la insercion. Estás siendo redireccionado...'; ");
+		WriteLine("				echo(\"");
+		WriteLine("					<script>");
+		WriteLine("						window.setTimeout(function(){");
+		WriteLine("							window.location.href = '" + relacion.Name + ".php';");
+		WriteLine("						}, 2000);");
+		WriteLine("					</script>");
+		WriteLine("				\");");
+		WriteLine("			}");
+		WriteLine("");
+		WriteLine("			mysqli_close($conex);");
+		WriteLine("");
+		WriteLine("			}");
+		WriteLine("		?>");
+		WriteLine("	</body>");
+		WriteLine("</html>");
+
+		
+	}
+#>
+<#
+	void generateHeadEntidad(Entidad entidad){
+		WriteLine("<html>");
+		WriteLine("	<head>");
+		WriteLine("		<title>");
+		WriteLine("			" + entidad.Name);
+		WriteLine("		</title>");
+		WriteLine("	</head>");
+		WriteLine("");
+	}
+#>
+<#
+	void generateBodyEntidad(Entidad entidad, ClavePrimaria atributoForaneo){
+		ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+		WriteLine("	<body bgcolor='#B8D1F1'>");
+		WriteLine("");
+		WriteLine("		<?php");	
+		WriteLine("			if(!(isset($_GET['var" + clave.Nombre + "']))){");
+		WriteLine("		?>");
+		WriteLine("");
+		WriteLine("		<form>");
+		WriteLine("			<h1>" + entidad.Name + "</h1>");
+		WriteLine("				" + clave.Nombre + ": <input name='var" + clave.Nombre + "' type='text' value='' >");
+		foreach(AtributoEntidad atributo in entidad.AtributoEntidad){
+			WriteLine("				" + atributo.Nombre + ": <input name='var" + atributo.Nombre + "' type='text' value='' >");
+		}
+		if(atributoForaneo != null){
+			WriteLine("				" + atributoForaneo.Nombre + ": <input name='var" + atributoForaneo.Nombre + "' type='text' value='' >");
+		}
+		WriteLine("");
+		WriteLine("				<input type='submit' value='Alta' />");
+		WriteLine("		</form>");
+		WriteLine("");
+		addGoBackButton();
+		WriteLine("		<?php");
+		WriteLine("");
+		WriteLine("			} else {");
+		WriteLine("");
+		WriteLine("			$conex = mysqli_connect('localhost','root') or die('ERROR...');");
+		WriteLine("");
+		WriteLine("			mysqli_select_db($conex,'GestionMat') or die('ERROR CON LA BASE DE DATOS');");
+		WriteLine("");
+		WriteLine("			$" + clave.Nombre + " = $_GET['var" + clave.Nombre + "'];");
+		foreach(AtributoEntidad atributo in entidad.AtributoEntidad){
+			WriteLine("			$" + atributo.Nombre + " = $_GET['var" + atributo.Nombre + "'];");
+		}
+		if(atributoForaneo != null){
+			WriteLine("			$" + atributoForaneo.Nombre + " = $_GET['var" + atributoForaneo.Nombre + "'];");
+		}
+		WriteLine("");
+
+		var variables = "('$" + clave.Nombre + "'";
+		foreach(AtributoEntidad atributo in entidad.AtributoEntidad){
+			variables += ",'$" + atributo.Nombre + "'";
+		}
+		if(atributoForaneo != null){
+			variables += ",'$" + atributoForaneo.Nombre + "'";
+		}
+		var end_line = ")\");";
+
+		var variables_names = "(" + clave.Nombre + "";
+		foreach(AtributoEntidad atributo in entidad.AtributoEntidad){
+			variables_names += "," + atributo.Nombre + "";
+		}
+		if(atributoForaneo != null){
+			variables_names += "," + atributoForaneo.Nombre;
+		}
+
+		WriteLine("			$resultado = mysqli_query($conex,\"INSERT INTO " + entidad.Name + variables_names + ")" +  " VALUES " + variables + end_line);
+		WriteLine("");
+		WriteLine("			if ($resultado){");
+		WriteLine("				echo' <b> Datos Insertados correctamente. Estás siendo redireccionado...</b> '; ");
+		WriteLine("				echo(\"");
+		WriteLine("					<script>");
+		WriteLine("						window.setTimeout(function(){");
+		WriteLine("							window.location.href = '" + entidad.Name+ ".php';");
+		WriteLine("						}, 2000);");
+		WriteLine("					</script>");
+		WriteLine("				\");");
+		WriteLine("			} else {");
+		WriteLine("				echo 'Error en la insercion- Estás siendo redireccionado...'; ");
+		WriteLine("				echo(\"");
+		WriteLine("					<script>");
+		WriteLine("						window.setTimeout(function(){");
+		WriteLine("							window.location.href = '" + entidad.Name + ".php';");
+		WriteLine("						}, 2000);");
+		WriteLine("					</script>");
+		WriteLine("				\");");
+		WriteLine("			}");
+		WriteLine("");
+		WriteLine("			mysqli_close($conex);");
+		WriteLine("");
+		WriteLine("			}");
+		WriteLine("		?>");
+		WriteLine("	</body>");
+		WriteLine("</html>");
+	}
+#>
+<#
+	void getCardinalidadDeLaRelacion(List<String> cardinalidad, List<Entidad> entidades_conexas, Relacion relacion){
+		String rela_aux = (String) relacion.Name.ToString();
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){
+					entidades_conexas.Add(entidad);
+					var returned = false;
+					foreach(EntidadReferencesRelacioned cardinalidades in EntidadReferencesRelacioned.GetLinksToRelacioned(entidad)){		
+						if(!returned){
+							cardinalidad.Add(cardinalidades.bCardMax.ToString());
+							returned = true;
+						}
+					}
+				}
+
+			}
+		}
+	}
+#>
+<#
+	void getClavesPrimariasDeLaRelacion(List<ClavePrimaria> claves, Relacion relacion){
+		String rela_aux = (String) relacion.Name.ToString();
+
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){
+					ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+					claves.Add(clave);		
+				}
+
+			}
+		}
+	}
+#>
+<#
+	void addGoBackButton(){
+		WriteLine("		<button onclick='goBack()'>Volver</button>");
+		WriteLine("");
+		WriteLine("		<script>");
+		WriteLine("			function goBack(){");
+		WriteLine("				window.location.href = 'index.php';");
+		WriteLine("			}");
+		WriteLine("		</script>");
+		WriteLine("");
+		
+	}
+#>
+<#
+	void generateIndex(){
+		
+		fileManager.StartNewFile("index.php");
+		WriteLine("<html>");
+		WriteLine("	<head>");
+		WriteLine("		<title>");
+		WriteLine("			UPM");
+		WriteLine("		</title>");
+		WriteLine("	</head>");
+		WriteLine("");
+		WriteLine("	<body bgcolor='#B8D1F1'>");
+		WriteLine("");
+		WriteLine("	<style>");
+		WriteLine("		ul {");
+		WriteLine("			list-style-type: none;");
+		WriteLine("			margin: 0;");
+		WriteLine("			padding: 0;");
+		WriteLine("			width: 200px;");
+		WriteLine("			background-color: #f1f1f1;");
+		WriteLine("		}");
+		WriteLine("");
+		WriteLine("		li a {");
+		WriteLine("			display: block;");
+		WriteLine("			color: #000;");
+		WriteLine("			padding: 8px 16px;");
+		WriteLine("			text-decoration: none;");
+		WriteLine("		}");
+		WriteLine("");
+		WriteLine("		li a:hover {");
+		WriteLine("			background-color: #555;");
+		WriteLine("			color: white;");
+		WriteLine("		}");
+		WriteLine("	</style>");
+		WriteLine("");
+		WriteLine("	<h2>UPM</h2>");
+		WriteLine("");
+		WriteLine("	<ul>");
+		foreach(Relacion relacion in this.Tapiz.Relacioned){
+
+			getCardinalidadDeLaRelacion(cardinalidad, entidades_conexas, relacion);
+			card1 = cardinalidad[cardinalidad.Count-2];
+			card2 = cardinalidad[cardinalidad.Count-1];
+
+			if(card1 == "N" && card2 == "N"){
+				WriteLine("		<li><a href='" + relacion.Name + ".php'>" + relacion.Name +"</a></li>");
+				
+			}
+		}
+
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			WriteLine("		<li><a href='" + entidad.Name + ".php'>" + entidad.Name +"</a></li>");
+		}
+		WriteLine("	</ul>");
+		WriteLine("");
+		WriteLine("	</body>");
+		WriteLine("</html>");
+		
+		
+	}
+#>

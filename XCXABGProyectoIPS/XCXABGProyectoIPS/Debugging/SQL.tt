@@ -1,0 +1,240 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".txt" #>
+<#@ XCXABGProyectoIPS processor="XCXABGProyectoIPSDirectiveProcessor" requires="fileName='Test.XCXABG_DSLProyIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+	void merAtributoRelacion(AtributoRelacion atributo) {
+			String atr_tipo = atributo.TipoDato.ToString();
+
+			if(atr_tipo.CompareTo("entero")==0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "INTEGER NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "INTEGER NOT NULL,");
+			} else if(atr_tipo.CompareTo("real") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "FLOAT NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "FLOAT NOT NULL,");
+			} else if(atr_tipo.CompareTo("fecha") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "DATETIME NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "DATETIME NOT NULL,");
+			} else if(atr_tipo.CompareTo("alfanumerico") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "CHAR" + "(" + atributo.LongitudDato + ") NULL,");
+				else	
+					WriteLine("		" + atributo.Nombre + " "+ "CHAR" + "(" + atributo.LongitudDato + ") NOT NULL,");
+			}
+	}
+#>
+<#
+	void merAtributoEntidad(AtributoEntidad atributo) {
+			String atr_tipo = atributo.TipoDato.ToString();
+
+			if(atr_tipo.CompareTo("entero")==0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "INTEGER NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "INTEGER NOT NULL,");
+			} else if(atr_tipo.CompareTo("real") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "FLOAT NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "FLOAT NOT NULL,");
+			} else if(atr_tipo.CompareTo("fecha") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "DATETIME NULL,");
+				else
+					WriteLine("		" + atributo.Nombre + " "+ "DATETIME NOT NULL,");
+			} else if(atr_tipo.CompareTo("alfanumerico") == 0){
+				if(atributo.esNulo)
+					WriteLine("		" + atributo.Nombre + " "+ "CHAR" + "(" + atributo.LongitudDato + ") NULL,");
+				else	
+					WriteLine("		" + atributo.Nombre + " "+ "CHAR" + "(" + atributo.LongitudDato + ") NOT NULL,");
+			}
+	}
+#>
+<#
+	void merClavePrimaria(ClavePrimaria clave){
+		String tipo = clave.TipoDato.ToString();
+	
+		if(tipo.CompareTo("entero")==0){
+			WriteLine("		" + clave.Nombre + " "+ "INTEGER NOT NULL,");	
+		} else if(tipo.CompareTo("real") == 0){
+			WriteLine("		" + clave.Nombre + " "+ "FLOAT NOT NULL,");
+		} else if(tipo.CompareTo("fecha") == 0){
+			WriteLine("		" + clave.Nombre + " "+ "DATETIME NOT NULL,");
+		} else if(tipo.CompareTo("alfanumerico") == 0){
+			WriteLine("		" + clave.Nombre + " "+ "CHAR" + "(" + clave.LongitudDato + ") NOT NULL,");
+		}
+	}
+#>
+<#
+	void merEntidad(Entidad entidad){
+		WriteLine("	CREATE TABLE IF NOT EXISTS "+ entidad.Name + " (");
+
+		ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+		merClavePrimaria(clave);
+	
+		foreach(AtributoEntidad atributo in entidad.AtributoEntidad){
+			merAtributoEntidad(atributo);			
+		}
+
+		WriteLine("		" + "PRIMARY KEY (" + clave.Nombre + ")");
+		WriteLine("	);");
+		WriteLine("");
+	}
+#>
+<#
+	void addForeignKeys(String rela_aux){
+		var entidades = new List<Entidad>();
+
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){	
+					entidades.Add(entidad);			
+				}
+
+			}
+		}
+		int i = 1;
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){	
+					ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+					if(i<entidades.Count)
+						WriteLine("		" + "FOREIGN KEY (" + clave.Nombre + ") REFERENCES " + entidad.Name + " (" + clave.Nombre + "),");
+					i++;
+				}
+
+			}
+		}
+		int j = 1;
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){	
+					ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+					if(j==entidades.Count)
+						WriteLine("		" + "FOREIGN KEY (" + clave.Nombre + ") REFERENCES " + entidad.Name + " (" + clave.Nombre + ")");
+					j++;
+				}
+
+			}
+		}
+		WriteLine("	);");
+		WriteLine("");
+	}
+#>
+<#
+	void merRelacionMN(Relacion relacion){
+		WriteLine("	CREATE TABLE IF NOT EXISTS "+ relacion.Name + " (");
+	
+		foreach(AtributoRelacion atributoR in relacion.AtributoRelacion){		
+			merAtributoRelacion(atributoR);
+		}
+
+		String rela_aux = (String) relacion.Name.ToString();
+
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){
+					ClavePrimaria clave = (ClavePrimaria) entidad.ClavePrimaria;
+					merClavePrimaria(clave);				
+				}
+
+			}
+		}
+
+		addForeignKeys(rela_aux);
+	}
+#>
+<#
+	void getCardinalidadDeLaRelacion(List<String> cardinalidad, List<Entidad> entidades_conexas, Relacion relacion){
+		String rela_aux = (String) relacion.Name.ToString();
+		foreach(Entidad entidad in this.Tapiz.Entidad){
+			foreach(Relacion relacion_aux in entidad.Relacioned){
+				String rela_name = (String) relacion_aux.Name.ToString();
+				if(rela_name.CompareTo(rela_aux)==0){
+					entidades_conexas.Add(entidad);
+					var returned = false;
+					foreach(EntidadReferencesRelacioned cardinalidades in EntidadReferencesRelacioned.GetLinksToRelacioned(entidad)){		
+						if(!returned){
+							cardinalidad.Add(cardinalidades.bCardMax.ToString());
+							returned = true;
+						}
+					}
+				}
+
+			}
+		}
+	}
+#>
+<#
+	void merRelacionUnoNClavePrimaria(ClavePrimaria clave){
+		String tipo = clave.TipoDato.ToString();
+	
+		if(tipo.CompareTo("entero")==0){
+			WriteLine("	" + clave.Nombre + " "+ "INTEGER NOT NULL;");	
+		} else if(tipo.CompareTo("real") == 0){
+			WriteLine("	" + clave.Nombre + " "+ "FLOAT NOT NULL;");
+		} else if(tipo.CompareTo("fecha") == 0){
+			WriteLine("	" + clave.Nombre + " "+ "DATETIME NOT NULL;");
+		} else if(tipo.CompareTo("alfanumerico") == 0){
+			WriteLine("	" + clave.Nombre + " "+ "CHAR" + "(" + clave.LongitudDato + ") NOT NULL;");
+		}
+	}
+#>
+<#
+void merRelacionUnoN(Entidad entidadUno, Entidad entidadN){
+	ClavePrimaria clave = (ClavePrimaria) entidadUno.ClavePrimaria;
+	WriteLine("	ALTER TABLE " + entidadN.Name + " ADD ");
+	merRelacionUnoNClavePrimaria(clave);
+	WriteLine("	ALTER TABLE " + entidadN.Name + " ADD FOREIGN KEY (" + clave.Nombre + ") REFERENCES " + entidadUno.Name + "(" + clave.Nombre + ");");
+
+}
+#>
+<#
+ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+ WriteLine("CREATE DATABASE GestionMat;");
+ WriteLine("USE GestionMat;");
+
+ foreach(Entidad entidad in this.Tapiz.Entidad){
+	merEntidad(entidad);
+ }
+
+
+ foreach(Relacion relacion in this.Tapiz.Relacioned){
+
+	var cardinalidad = new List<String>();
+	var entidades_conexas = new List<Entidad>();
+
+	getCardinalidadDeLaRelacion(cardinalidad, entidades_conexas, relacion);
+
+	var card1 = cardinalidad[cardinalidad.Count-2];
+	var card2 = cardinalidad[cardinalidad.Count-1];
+	Entidad entidadUno;
+	Entidad entidadN;
+	
+	if(card1 == "N" && card2 == "N"){
+		merRelacionMN(relacion);
+	} else if(card1 == "N" && card2 == "cero" || card2 == "uno" || card2 == "dos"){
+		entidadUno = entidades_conexas[entidades_conexas.Count-1];
+		entidadN = entidades_conexas[entidades_conexas.Count-2];
+		merRelacionUnoN(entidadUno, entidadN);
+	} else if(card2 == "N" && card2 == "cero" || card2 == "uno" || card2 == "dos"){
+		entidadUno = entidades_conexas[entidades_conexas.Count-2];
+		entidadN = entidades_conexas[entidades_conexas.Count-1];
+		merRelacionUnoN(entidadUno, entidadN);
+	}
+
+ }
+
+ fileManager.Process();
+#> 
+
